@@ -1,0 +1,32 @@
+h1 {
+    border:10px;
+    border-style: double;
+    border-color: #658156;
+    background-color: rgb(185, 192, 94);
+    color:#415c19;
+    font-family:fantasy;
+    text-align:center;
+    }
+    
+    
+    h3{
+    color:#2eaf4a;
+    font-family:monospace;
+    font-size: 24px;
+    }
+    
+    p{
+    color:#1a4624;
+    font-family: cursive;
+    }
+    
+    button{
+    background-color:#72b581;
+    border:none;
+    border-radius:45px;
+    }
+    
+    b{
+      background-color:#929c5d;
+    }
+    
