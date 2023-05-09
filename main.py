@@ -16,17 +16,17 @@ def preview():
     return result
 
 @app.route('/ccd/{value}', methods=['GET'])
-def countrycode(value):
+def countycode(value):
     print('value: ', value)
-    filtered = df[df['country_code'] == value]
+    filtered = df[df['county_code'] == value]
     if len(filtered) <= 0:
         return 'There is nothing here'
     else: 
         return filtered.to_json(orient="records")
 
 @app.route('/ccd/<value>/sex/<value2>')
-def countrycode2(value, value2):
-    filtered = df[df['country_code'] == value]
+def countycode2(value, value2):
+    filtered = df[df['county_code'] == value]
     filtered2 = filtered[filtered['sex'] == value2]
     if len(filtered2) <= 0:
         return 'There is nothing here'
