@@ -16,7 +16,7 @@ async def preview():
     return {result}
 
 @app.get("/ccd/{value}")
-async def countycode(value):
+async def ccode(value):
     print('value: ', value)
     filtered = df[df['county_code'] == value]
     if len(filtered) <= 0:
@@ -25,7 +25,7 @@ async def countycode(value):
         return {filtered.to_json(orient="records")}
 
 @app.get('/ccd/{value}/sex/{value2}')
-async def countycode2(value, value2):
+async def ccode2(value, value2):
     filtered = df[df['county_code'] == value]
     filtered2 = filtered[filtered['sex'] == value2]
     if len(filtered2) <= 0:
