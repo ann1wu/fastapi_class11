@@ -1,16 +1,10 @@
 from fastapi import FastAPI
-from fastapi.responses import HTMLResponse
-from fastapi.responses import FileResponse
+import pandas as pd
 
-some_file_path = "Template/page.html"
+df = pd.read_csv('./data/Childrenrollment.csv')
+
 app = FastAPI()
 
-
-@app.get("/")
-async def main():
-    return FileResponse(some_file_path)
-
-
-#@app.get("/")
-#async def root():
-#    return {"message": "Hello World"}
+@app.get('/')
+async def root():
+    return {'this is a API service for NY children program enrollment code details'}
