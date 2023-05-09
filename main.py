@@ -7,7 +7,7 @@ app = FastAPI()
 
 @app.get('/')
 async def root():
-    return {'this is a API service for MN SVC code details'}
+    return {'this is a API service for MN healthcare utilization code details'}
 
 @app.get('/preview')
 async def preview():
